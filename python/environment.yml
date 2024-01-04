@@ -1,0 +1,11 @@
+name: planning-data-specialist
+dependencies:
+  - python = 3.8*
+packages:
+  - pandas
+  - openpyxl
+  - sqlalchemy
+  - python-dotenv
+channels:
+  - default
+  - pip
