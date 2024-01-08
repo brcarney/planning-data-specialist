@@ -6,6 +6,9 @@ packages:
   - openpyxl
   - sqlalchemy
   - python-dotenv
+  - matplotlib
+  - seaborn
 channels:
+  -conda-forge
   - default
   - pip
