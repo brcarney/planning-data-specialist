@@ -15,7 +15,7 @@ def summary_stats(year: int):
         )
         print(x)
         x.to_csv(
-            "G:/My Drive/PlanningDataSpecialist/data-outputs/summary_stats_{}.csv".format(
+            "G:/My Drive/PlanningDataSpecialist/data-outputs/mcd_pd_summary_stats_{}.csv".format(
                 year
             )
         )
@@ -79,12 +79,12 @@ def drop_outliers(year: int):
         ]
         print(len(df))
         z = np.abs(stats.zscore(df["crashes_per_cap"]))
-        outliers = np.array(np.where(z > 2)[0])
+        outliers = np.array(np.where(z > 3)[0])
         print(outliers)
         df.drop(index=outliers, inplace=True)
         no_outlier_df = pd.DataFrame(df)
         no_outlier_df.to_csv(
-            "G:/My Drive/PlanningDataSpecialist/data-outputs/crash_summary_{}_no_outliers.csv".format(
+            "G:/My Drive/PlanningDataSpecialist/data-outputs/mcd_pd_crash_summary_{}_no_outliers.csv".format(
                 year
             )
         )
