@@ -18,19 +18,25 @@ This script imports the CRASH_APPENDED_DF and uses functions to provide summary 
 
 ## Charts
 ### Population
-![Alt text](population.png)
+![Alt text](images/population.png)
 
 The chart above shows the 2020 population for municipalities and planning districts in the Greater Philadelphia region. One key takeaway from this chart is that the populations in the Philadelphia planning districts are much higher than most of the municipalities in the region. These large populations can skew crash per capita results in the planning districts.
 
 ### Crashes
-![Alt text](crashes.png)
+![Alt text](images/crashes.png)
 
 The chart above shows the 2020 crash totals by municipality and planning district. Aside from Philadelphia, the NJ counties have a higher volume of crashes than the suburban PA counties. 
 
 
 ### Crashes per Capita
-![Alt text](crashes_per_capita.png)
+![Alt text](images/crashes_per_capita.png)
 
 The chart above shows the 2020 crash per capita values by municipality and planning district. Once again, the NJ counties show higher totals than the PA counties.
 
-### Findings and Future Data Analysis Topics
+## Summary and Future Analysis
+
+### Summary
+This analysis shows the limitations of comparing crash and population data at the municipal and planning district level. It is helpful to know crash totals and crashes per capita at these geographies, but additional data is necessary to provide an insightful analysis. 
+
+### Future Work
+Future analysis of crash and population data should incorporate more sophisticated data filtering processes and evaluate this data at smaller geographies. As noted in a previous [DVRPC report](https://www.dvrpc.org/reports/18022.pdf), there is a discrepancy in crash severity definitions and reporting in PA and NJ. Therefore, selecting crashes that led to a fatality or serious injury (KSI) is one way to help standardize the data between the two states to allow for a better comparison. Additionally, it would helpful to have road classification (Interstate/Arterial/Collector/Local) and Vehicle Miles Traveled (VMT) data to segment geographies based on road composition and travel volume. Regarding geography, this work would also benefit from analyzing crash data at smaller geographies such as Traffic Analysis Zones (TAZ) and census tracts considering the lack of uniformity with municipal and planning district sizes and boundaries.

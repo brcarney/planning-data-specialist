@@ -44,31 +44,6 @@ def summary_stats_counties(year: int):
 summary_stats_counties(YEARS)
 
 
-def pop_buckets(year: int):
-    for year in YEARS:
-        pct_10_df = CRASH_POP_APPEND_DF.loc[CRASH_POP_APPEND_DF["Crash Year"] == year]
-        pct_10 = round(pct_10_df["pop_{}".format(year)].quantile(q=0.10), 1)
-        print("The 10th percentile for population in {} is {}".format(year, pct_10))
-
-
-pop_buckets(YEARS)
-
-"""
-def outlier_detection(year: int):
-    df = CRASH_POP_APPEND_DF.loc[CRASH_POP_APPEND_DF["Crash Year"] == year]
-    q1 = df["pop_{}".format(year)].quantile(0.25)
-    q3 = df["pop_{}".format(year)].quantile(0.75)
-    iqr = q3 - q1
-    lower = q1 - (1.5 * iqr)
-    upper = q3 + (1.5 * iqr)
-    upper_array = np.where(df["pop_{}".format(year)] >= upper)[0]
-    lower_array = np.where(df["pop_{}".format(year)] <= lower)[0]
-    df.drop(index=upper_array, inplace=True)
-    df.drop(index=lower_array, inplace=True)
-    high = df.loc[df["pop_{}".format(year)] >= upper]
-    print(upper_array)
-"""
-
 APPENDED_DATA = []
 
 
